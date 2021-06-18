@@ -31,7 +31,6 @@ export default {
 
   async created() {
     await this.getData();
-    this.filteredRentals;
   },
 
   computed: {
