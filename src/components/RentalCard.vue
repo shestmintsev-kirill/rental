@@ -22,19 +22,21 @@
           </p>
         </div>
       </div>
-      <div class="margin-card">
-        <div class="rental-item-subtitle margin-text">
-          <p class="card-text subtitle">{{ rental.title }}</p>
-          <p class="card-text address">{{ rental.address }}</p>
+      <router-link :to="`/details/${rental.id}`">
+        <div class="margin-card">
+          <div class="rental-item-subtitle margin-text">
+            <p class="card-text subtitle">{{ rental.title }}</p>
+            <p class="card-text address">{{ rental.address }}</p>
+          </div>
+          <div class="rental-item-price margin-text">
+            <p class="card-text">
+              New Properties for Sale from
+              <span class="price">£{{ rental.price }}</span>
+            </p>
+            <p class="card-text shared">Shared Ownership Available</p>
+          </div>
         </div>
-        <div class="rental-item-price margin-text">
-          <p class="card-text">
-            New Properties for Sale from
-            <span class="price">£{{ rental.price }}</span>
-          </p>
-          <p class="card-text shared">Shared Ownership Available</p>
-        </div>
-      </div>
+      </router-link>
     </div>
   </main>
 </template>
